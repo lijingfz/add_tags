@@ -98,9 +98,9 @@ if __name__ == "__main__":
             # arn = 'arn:aws:athena:us-east-1:890717383483:workgroup/primary'
             arn = Final_result.loc[row]['line_item_resource_id']
             add_tags = {
-                'map-migrated': 'mig4WYY15JYWN'
+                'xxxx': 'yyyyy'
             }
-            tag = {'Key': 'map-migrated', 'Value': 'mig4WYY15JYWN'}
+            tag = {'Key': 'xxxx', 'Value': 'yyyyy'}
             region = Final_result.loc[row]['product_region']
             # client = boto3_client(region=region)
             if check_tag(client, arn, tag):
