@@ -95,7 +95,7 @@ if __name__ == "__main__":
         if Final_result.loc[row]['map'] == 0 and Final_result.loc[row]['product_region'] == 'us-west-2':
             print(Final_result.loc[row]['line_item_resource_id'], Final_result.loc[row]['product_region'])
             # Check Tag Mock speed!
-            # arn = 'arn:aws:athena:us-east-1:890717383483:workgroup/primary'
+            # arn = 'arn:aws:athena:us-east-1:XXXXXXXXXX:workgroup/primary'
             arn = Final_result.loc[row]['line_item_resource_id']
             add_tags = {
                 'xxxx': 'yyyyy'
