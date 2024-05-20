@@ -80,11 +80,7 @@ def add_map_flag(original_dataframe, map_list):
 
 if __name__ == "__main__":
     # 导入 CUR 中生成的数据
-    # 122a1df4-39c1-487d-932c-92242783e505.csv
-    # df = load_csv_data('/Users/jingamz/Downloads/604f694b-7a04-4c65-9256-02148a52a7bc.csv')
     df = load_csv_data('/home/ec2-user/tags/604f694b-7a04-4c65-9256-02148a52a7bc.csv')
-    # print(df.head())
-
     # MAP=='Y' list
     product_name = map_list(df)
     Final_result = add_map_flag(df, product_name)
@@ -94,8 +90,6 @@ if __name__ == "__main__":
     for row in Final_result.index:
         if Final_result.loc[row]['map'] == 0 and Final_result.loc[row]['product_region'] == 'us-west-2':
             print(Final_result.loc[row]['line_item_resource_id'], Final_result.loc[row]['product_region'])
-            # Check Tag Mock speed!
-            # arn = 'arn:aws:athena:us-east-1:XXXXXXXXXX:workgroup/primary'
             arn = Final_result.loc[row]['line_item_resource_id']
             add_tags = {
                 'xxxx': 'yyyyy'
